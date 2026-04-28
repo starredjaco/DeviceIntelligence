@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application>
+        <!--
+            Auto-init provider for the DeviceIntelligence SDK. Runs before
+            Application.onCreate, pre-warms the integrity check on a
+            background thread, and caches the result so the consumer's
+            first DeviceIntelligence.collect() call is free.
+
+            authority pattern: ${applicationId}.io.ssemaj.deviceintelligence.InitProvider
+            (manifest merger substitutes applicationId per consumer).
+
+            initOrder is high so we run before lower-priority init
+            providers (e.g. WorkManager, Firebase). Higher = earlier.
+        -->
+        <provider
+            android:name="io.ssemaj.deviceintelligence.internal.DeviceIntelligenceInitProvider"
+            android:authorities="${applicationId}.io.ssemaj.deviceintelligence.InitProvider"
+            android:exported="false"
+            android:initOrder="1000" />
+    </application>
+
+</manifest>
