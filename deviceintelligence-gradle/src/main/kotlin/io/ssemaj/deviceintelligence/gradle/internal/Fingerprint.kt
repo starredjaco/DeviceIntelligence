@@ -29,7 +29,7 @@ internal data class Fingerprint(
 ) {
     companion object {
         const val SCHEMA_VERSION: Int = 1
-        const val ASSET_PATH: String = "assets/io.ssemaj/fingerprint.bin"
+        const val ASSET_PATH: String = "assets/io.ssemaj.deviceintelligence/fingerprint.bin"
         val DEFAULT_IGNORED_ENTRY_PREFIXES: List<String> = listOf("META-INF/")
         val DEFAULT_IGNORED_ENTRIES: List<String> = listOf(ASSET_PATH)
     }

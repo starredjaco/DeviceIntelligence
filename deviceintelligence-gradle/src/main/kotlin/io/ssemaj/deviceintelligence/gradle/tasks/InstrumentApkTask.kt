@@ -34,7 +34,7 @@ import java.util.zip.ZipOutputStream
 
 /**
  * F8 — replaces AGP's signed APK with an instrumented + re-signed APK that
- * embeds `assets/io.ssemaj/fingerprint.bin` (the F7 encrypted blob).
+ * embeds `assets/io.ssemaj.deviceintelligence/fingerprint.bin` (the F7 encrypted blob).
  *
  * Wired as a [com.android.build.api.artifact.SingleArtifact.APK] transform:
  * AGP hands us the just-signed APK directory as input, and downstream
@@ -70,7 +70,7 @@ import java.util.zip.ZipOutputStream
  *   2. Encrypt the resulting [Fingerprint] CBO with the per-build XOR key.
  *   3. Pass 2: re-zip the SAME entries (same input, same deflater settings,
  *      same iteration order — therefore byte-identical compressed bodies)
- *      and append `assets/io.ssemaj/fingerprint.bin` (STORED) at the end.
+ *      and append `assets/io.ssemaj.deviceintelligence/fingerprint.bin` (STORED) at the end.
  *      Because pass-1 and pass-2 produce identical bodies for the entries
  *      we care about, the hashes baked from pass 1 remain valid for pass 2.
  *   4. Re-sign pass-2 APK with apksig (v1 + v2 + v3).

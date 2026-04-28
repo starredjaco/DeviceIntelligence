@@ -175,7 +175,7 @@ class DeviceIntelligencePlugin : Plugin<Project> {
             //    using the same keystore the consumer's signingConfig defines.
             val instrumentTask = project.tasks.register<InstrumentApkTask>(instrumentTaskName) {
                 group = "io.ssemaj"
-                description = "Injects assets/io.ssemaj/fingerprint.bin into the signed APK and re-signs (variant '${variant.name}')."
+                description = "Injects assets/io.ssemaj.deviceintelligence/fingerprint.bin into the signed APK and re-signs (variant '${variant.name}')."
 
                 keyFile.set(genKeyTask.flatMap { it.keyFile })
                 keystoreFile.fileValue(cfgStoreFile)

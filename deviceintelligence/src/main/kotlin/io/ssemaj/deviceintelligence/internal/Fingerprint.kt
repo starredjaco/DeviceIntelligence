@@ -37,6 +37,6 @@ internal data class Fingerprint(
          * Path of the encrypted blob inside the APK as written by F8's
          * [InstrumentApkTask][io.ssemaj.deviceintelligence.gradle.tasks.InstrumentApkTask].
          */
-        const val ASSET_PATH: String = "assets/io.ssemaj/fingerprint.bin"
+        const val ASSET_PATH: String = "assets/io.ssemaj.deviceintelligence/fingerprint.bin"
     }
 }

@@ -17,7 +17,7 @@ import org.gradle.api.tasks.TaskAction
  * [GenerateKeyChunksTask], emitting `fingerprint.bin`.
  *
  * The output is the runtime-consumable asset that F8 will inject into the
- * APK's `assets/io.ssemaj/fingerprint.bin`. F9's runtime decoder reverses
+ * APK's `assets/io.ssemaj.deviceintelligence/fingerprint.bin`. F9's runtime decoder reverses
  * this step: read asset → reflect KeyAssembler → XOR-decrypt → parse via
  * the same FingerprintCodec format.
  *

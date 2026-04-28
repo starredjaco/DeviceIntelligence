@@ -118,7 +118,7 @@ dependencies {
 The plugin runs at build time per variant: it computes a SHA-256 fingerprint
 over your APK's entries, encrypts the blob with a per-build XOR key whose
 chunks are split across generated Kotlin classes, and injects the encrypted
-blob as an asset (`assets/io.ssemaj/fingerprint.bin`) before re-signing the
+blob as an asset (`assets/io.ssemaj.deviceintelligence/fingerprint.bin`) before re-signing the
 APK with your `signingConfig` (v1+v2+v3).
 
 ### 2. Collect at runtime
